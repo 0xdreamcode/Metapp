@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+
+
+<div class="col">
+  <textarea id="text" ></textarea>
+
+
+  <div>
+    Pitch
+    <span id="rateLabel">1</span>
+  </div>
+  <input oninput="setratelabel(event)" type="range" value="1" id="rate" min="0.25" step="0.01" max="4"/>
+
+  <div>
+    Rate
+    <span id="pitchLabel">0</span>
+  </div>
+  <input oninput="setpitchlabel(event)" type="range" value="0" id="pitch" min="-20" step="0.01" max="20"/>
+
+  <select id="type">
+    <option value="Wavenet" >WaveNet</option>
+    <option disabled>Basic (disabled because you don't wanna know)</option>
+  </select>
+  <select id="voice">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F" selected>Loli</option>
+  </select>
+  <input type="button" onclick="play()"/>
+</div>
+
+
+</body>
+</html>
+<style>
+div {
+  display: flex;
+  justify-content: space-between;
+}
+.col {
+  flex-direction: column !important;
+}
+</style>
+<script>
+
+
+// https://texttospeech.googleapis.com/v1beta1/text:synthesize
+var apiURL = 'https://texttospeech.googleapis.com/v1beta1/text:synthesize'
+var apiKey = 'AIzaSyC-9kuI1J4Vour7Go9oMXKBOYzu9C6lGjU'
+
+function setpitchlabel(e) {
+  document.getElementById('pitchLabel').innerHTML = e.target.value;
+}
+
+function setratelabel(e) {
+  document.getElementById('rateLabel').innerHTML = e.target.value;
+}
+
+function play(text) {
+  if (!text) text = document.getElementById('text').value
+  if (text.length == 0) throw 'Text cannot be blank.'
+
+  var type = document.getElementById('type').value;
+  var voice = document.getElementById('voice').value
+  var rate = document.getElementById('rate').value;
+  var pitch = document.getElementById('pitch').value;
+  var data = {
+    "audioConfig": {
+      "audioEncoding": "LINEAR16",
+      "pitch": pitch,
+      "speakingRate": rate
+    },
+    "input": {
+      "text": text
+    },
+    "voice": {
+      "languageCode": "en-US",
+      "name": "en-US-Wavenet-" + voice
+    }
+  }
+
+  fetch(apiURL + `?alt=json&key=` + apiKey , {
+    method: 'post',
+    headers: {
+    },
+    body: JSON.stringify(data)
+  }).then(r => {
+    return r.json()
+  }).then(json => {
+    console.log(json.audioContent)
+    var audio = new Audio('data:audio/mp3;base64,'+json.audioContent).play();
+  }).catch(console.log)
+}
+
+
+</script>
