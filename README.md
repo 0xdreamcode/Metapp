@@ -6,13 +6,6 @@ Download launcher.html
 Set the homepage of Google Chrome to file://where/you/put/the/launcher.html
 Put voiceapp.html in the same directory.
 
-V THIS MAY NOT WORK V
-# How to deploy as a mobile app
-* Open in Chrome
-* Download as a local file
-* Open that file
-* Press "Save to Home Screen"
-/\ THIS MAY NOT WORK /\
 
 ## Basically 
 Anything with a V8 engine and HTML renderer can run this and it is to be deployed thusly as a local file containing all the dependencies within itself, packed into a web version, with OS integration as a possible extention. The HTML file containing the layout, styling, encoded assets and executable section is the app itself.
