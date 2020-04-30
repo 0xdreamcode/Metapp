@@ -14,4 +14,4 @@ Anything with a V8 engine and HTML renderer can run this and it is to be deploye
 
 All code must be released available within the app's file object (packed/obfuscated or html within executable) and if you find a use for this please let me know because I am so done writing user applications.
 
-Like voiceapp.html could be anything, it could be a Discord client, it could be a game, it could even be a whole new virtual operating system in and of itsefs. Now if I find a way to run NodeJS on the Android, have ot run a sockt.io...
+Like voiceapp.html could be anything, it could be a Discord client, it could be a game, it could even be a whole new virtual operating system in and of itsefs. 
