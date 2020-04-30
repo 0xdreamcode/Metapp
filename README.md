@@ -3,8 +3,7 @@ Universal app development and deployment pipeline. Included is an example of a g
 
 # How to download for iOS/Android
 * Download launcher.html
-* Set the homepage of Google Chrome or w/e to file://where/you/put/the/launcher.html
-* Put voiceapp.html in the apps directory that is located where launcher.html is.
+* Launch it from the Metapp bin folder
 
 The launcher should then detect present apps in the directory using JSON magic and give you a nice home screen, then you can hit Voiceapp and there you have it.
 
