@@ -7,7 +7,7 @@ Universal app development and deployment pipeline. Included is an example of a g
 
 The launcher should then detect present apps in the directory using JSON magic and give you a nice home screen, then you can hit Voiceapp and there you have it.
 
-### This also works on Chrome OS, Linux, Windows and anything that runs Google's V8 engine including but not limited to modified versions of Google Chrmoe and/or any other layout rendering application at any OS or hardware level with or without said layout rendering capability.
+### This also works on Chrome OS, Linux, Windows and anything that runs Google's V8 engine (or if forced to, any JavaScript/markup  rendering engine) including but not limited to modified versions of Google Chrmoe and/or any other layout rendering application at any OS or hardware level with or without said layout rendering capability.
 
 ## Abstract
 Anything with a V8 engine and HTML renderer can run this and it is to be deployed thusly as a local file containing all the dependencies within itself, packed into a web version, with OS integration as a possible extention. The HTML file containing the layout, styling, encoded assets and executable section is the app itself.
