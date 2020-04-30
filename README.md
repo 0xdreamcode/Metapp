@@ -1,5 +1,5 @@
-# voiceapp
-Universal text to speech.
+# metapp
+Universal app development and deployment pipeline. Included is an example of a generic app, deployable on any device or operating system.
 
 # How to download for iOS/Android
 * Download launcher.html
