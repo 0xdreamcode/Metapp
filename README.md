@@ -16,4 +16,4 @@ All code must be released available within the app's file object (packed/obfusca
 
 Like voiceapp.html could be anything, it could be a Discord client, it could be a game, it could even be a whole new virtual operating system in and of itsefs. 
 
-*** Licensed L/GPLv3.0
+### Licensed L/GPLv3.0
