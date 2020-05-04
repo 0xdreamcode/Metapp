@@ -3,8 +3,7 @@ Universal app development and deployment pipeline. Included is an example of a g
 
 # How to download for iOS/Android
 * Download launcher.html
-* Launch it from the Metapp bin folder
-
+* Launch it from the file location via Desktop shortcut or equivalent
 The launcher should then detect present apps in the directory using JSON magic and give you a nice home screen, then you can hit Voiceapp and there you have it.
 
 ### This also works on Chrome OS, Linux, Windows and anything that runs Google's V8 engine (or if forced to, any JavaScript/markup  rendering engine) including but not limited to modified versions of Google Chrmoe and/or any other layout rendering application at any OS or hardware level with or without said layout rendering capability.
